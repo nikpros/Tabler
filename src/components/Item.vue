@@ -110,11 +110,11 @@ export default {
                 if (array[i+1] == array[i] + 1) count++;
                 else {
                     switch (count) {
-                        case 1: result.push(this.dayOfIndex[i+1]);
+                        case 1: result.push(this.dayOfIndex[array[i]]);
                             break;
-                        case 2: result.push(`${this.dayOfIndex[array[start]]}, ${this.dayOfIndex[i+1]}`);
+                        case 2: result.push(`${this.dayOfIndex[array[start]]}, ${this.dayOfIndex[array[i]]}`);
                             break;
-                        default: result.push(`${this.dayOfIndex[array[start]]} - ${this.dayOfIndex[i+1]}`);
+                        default: result.push(`${this.dayOfIndex[array[start]]} - ${this.dayOfIndex[array[i]]}`);
                     }
                     start = i + 1;
                     count = 1;
