@@ -6,18 +6,26 @@
  * import Vue from 'vue'
  * window.Vue = require('vue')
  */
-
+import Vue from 'vue'
 import './assets/styl/main.styl'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import App from './components/App.vue'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCircle)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 import store from './store'
 
-window.Vue = require('vue')
-
-Vue.component('app-component', require('./components/App.vue').default)
+// Vue.component('app-component', require('./components/App.vue').default)
 
 // Vue init
-const app = new Vue({
+new Vue({
     el: '#app',
-    store
+    store,
+    render: h => h(App)
 })

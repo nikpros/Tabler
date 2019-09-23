@@ -1,5 +1,5 @@
 <template lang="pug">
-    .container.mt-5
+    #app.container.mt-5
         .row
             .col
                 .form-group
@@ -24,6 +24,7 @@ import { mapGetters, mapActions, mapMutations } from 'vuex'
 import Schedule from './Schedule.vue'
 
 export default {
+    name: 'app',
     data () {
         return {
             requestSlag: 'cubalibrespb',
