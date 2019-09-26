@@ -1,9 +1,9 @@
-# SPA template
+# Tabler
 
 ## Usage
-This is a template for Single Page Application
+Тестовое задание Tabler
 ```
-$ cd webpack-spa
+$ cd Tabler
 $ npm install
 $ npm run dev
 ```
@@ -11,4 +11,4 @@ $ npm run dev
 + PUG
 + Stylus
 + Bootstrap
-+ jQuery
++ Vue
