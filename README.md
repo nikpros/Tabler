@@ -1,13 +1,13 @@
 # Tabler
 
-## Usage
+## Пояснение
 Тестовое задание Tabler
 ```
 $ cd Tabler
 $ npm install
 $ npm run dev
 ```
-## What's included
+## Стек
 + PUG
 + Stylus
 + Bootstrap
