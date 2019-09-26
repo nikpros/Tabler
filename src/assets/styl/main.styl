@@ -1,7 +1,9 @@
 @import "utils/vars.styl"
 @import "utils/mixins.styl"
+@import "utils/fonts.styl"
     
 @import "modules/search.styl"
+@import "modules/item.styl"
 
 html
   line-height: $mainLineHeight
@@ -14,3 +16,6 @@ html
     font-size: 15px
   @media screen and (max-width: $phoneWidth)
     font-size: 14px
+
+.card-body
+  color: $neutral-regular

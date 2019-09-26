@@ -6,12 +6,8 @@
                 :key="index"
                 :name="schedule.name"
                 :item="schedule.item"
+                :open="schedule.isOpen"
             )
-            hr
-            pre {{ getSchedules[1].item }}
-
-
-
 </template>
 
 <script>
