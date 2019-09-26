@@ -1,5 +1,6 @@
 const path = require('path') // необходимо для корректного формирования путей в разных ОС
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') 
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
@@ -106,5 +107,10 @@ module.exports = {
                 template: `${PATHS.source}/pug/index.pug`,
             }),
             new VueLoaderPlugin(),
-        ],
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                "window.jQuery": 'jquery'
+            })
+        ]
 }

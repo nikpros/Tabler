@@ -5,24 +5,25 @@
                 h4.title {{ name }}
                 template(v-if="isMain")
                     h4.ml-3.muted(
-                        :class="{ open: open, close: !open }"
+                        :class="{ open: open }"
                     ) {{ worked }}
             template(v-if="!isMain")
                 .col.text-right
                     p
                         font-awesome-icon.mr-2.marker(
                             icon="circle"
+                            :class="{ open: open }"
                         )
                         | {{ worked }}
         template(
-            v-for="day in item"
+            v-for="(day, index) in item"
         )
             .row
                 .col
                     p {{ _console(day.day) }}
                 .col.text-right
                     p {{ day.time }}
-        hr
+        slot
 </template>
 
 <script>
@@ -45,7 +46,6 @@ export default {
 
     },
     mounted() {
-        console.log(this.name)
         this.name == 'Часы работы' ? this.isMain = true : this.isMain = false
         this.open ? this.worked = 'открыто' : this.worked = 'закрыто'
     },

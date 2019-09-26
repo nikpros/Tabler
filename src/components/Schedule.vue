@@ -8,6 +8,8 @@
                 :item="schedule.item"
                 :open="schedule.isOpen"
             )
+                slot(v-if="index < getSchedules.length - 1")
+                    hr
 </template>
 
 <script>

@@ -37,7 +37,7 @@ export default new Vuex.Store({
                         }
                     }
                 })
-        }
+            }
     },
     mutations: {
         // addSchedule(state, { type, data }) {
@@ -121,7 +121,7 @@ export default new Vuex.Store({
                 let now = getNowDate();
                 let [hStart, mStart] = day.startAt.split(':');
                 let [hEnd, mEnd] = day.endAt.split(':');
-                if (day.dayOfWeek == now.day && (now.h < hEnd && now.h > hStart) && (now.m < mEnd && now.m > mStart)) {
+                if (day.dayOfWeek == now.day && (now.h <= hEnd && now.h >= hStart) && (now.m <= mEnd && now.m >= mStart)) {
                     return true
                 }
                 return false

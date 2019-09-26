@@ -11,9 +11,9 @@
                         )
                 button.base.btn(@click="getScheduleRequest(requestSlag)")
                     | Обновить
-        .row
+        .row.mt-5
             .col
-                schedule-component(v-if="getSchedules")
+                schedule-component
 
 
 </template>
